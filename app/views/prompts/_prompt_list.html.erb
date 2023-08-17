@@ -1,0 +1,9 @@
+<p>
+  <% prompts.each do |prompt| %>
+    <%= render 'prompt', prompt: prompt %>
+    </br>
+  <% end %>
+  <% if prompts.blank? %>
+    Sorry, but nothing was found!
+  <% end %>
+</p>

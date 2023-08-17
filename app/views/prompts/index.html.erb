@@ -1,0 +1,18 @@
+<div>
+  </br>
+  </br>
+  <%= form_tag search_prompt_prompts_path, data: { turbo_frame: 'prompt' } do %>
+    <%= text_area_tag :query %>
+    <br>
+    <%= submit_tag 'Search', class: 'btn btn-input' %>
+
+    <%= link_to 'Random prompt', random_prompt_prompts_path, data: { turbo_stream: '' }, class: 'btn' %>
+
+  <% end %>
+</br>
+</br>
+  <%= turbo_frame_tag 'prompt' do %>
+    Please enter search phrase and press "Search" or press "Random prompt" if you feel lucky.
+  <% end %>
+
+</div>
